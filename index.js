@@ -31,4 +31,4 @@ const submitPopUp = (e) => {
 
 getInfoBtn.addEventListener('click', showPopUp);
 popUpCloseBtn.addEventListener('click', closePopUp);
-popUp.addEventListener('submit', submitPopUp)
+popUp.addEventListener('submit', submitPopUp);
