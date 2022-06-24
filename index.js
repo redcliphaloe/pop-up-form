@@ -4,9 +4,16 @@ const popUp = document.querySelector('.pop-up');
 const popUpCloseBtn = document.querySelector('.pop-up__close-btn');
 
 const showPopUp = (e) => {
+  const name = document.querySelector('#name');
+  const eMail = document.querySelector('#e-mail');
+  const message = document.querySelector('#message');
+
   blackOut.classList.add('black-out_show');
   popUp.classList.add('pop-up_show');
-  document.querySelector('#name').focus();
+  name.focus();
+  name.value = '';
+  eMail.value = '';
+  message.value = '';
 }
 
 const closePopUp = (e) => {
