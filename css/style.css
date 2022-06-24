@@ -78,6 +78,19 @@
   transform: scale(1.1);
 }
 
+.black-out {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(0);
+}
+
+.black-out_show {
+  transform: scale(1);
+}
+
 .pop-up {
   width: 100%;
   max-width: var(--pop-up-width);
