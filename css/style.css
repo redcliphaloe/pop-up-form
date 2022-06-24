@@ -15,10 +15,67 @@
   font-family: Arial, sans-serif;
 }
 
-.body__pop-up {
-  position: fixed;
-  left: calc(50% - var(--pop-up-width) / 2);
-  top: calc(50% - var(--pop-up-height) / 2);
+.body {
+  height: 100vh;
+  background-color: var(--pop-up-dark-color);
+}
+
+.wrapper {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: var(--pop-up-light-color);
+}
+
+.logo {
+  display: block;
+  margin: 0;
+  color: var(--pop-up-base-color);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.header__logo {
+  margin-left: 75px;
+  line-height: 70px;
+}
+
+.main {
+  width: 100%;
+  height: calc(100vh - 70px - 95px);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  background-color: var(--pop-up-base-color);
+}
+
+.get-info {
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.get-info:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .pop-up {
@@ -31,6 +88,18 @@
   -webkit-box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.1), 0px 5px 0px 0px rgba(34, 60, 80, 0.1);
   -moz-box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.1), 0px 5px 0px 0px rgba(34, 60, 80, 0.1);
   box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.1), 0px 5px 0px 0px rgba(34, 60, 80, 0.1);
+  transform: scale(0);
+  transition: 0.3s;
+}
+
+.body__pop-up {
+  position: fixed;
+  left: calc(50% - var(--pop-up-width) / 2);
+  top: calc(50% - var(--pop-up-height) / 2);
+}
+
+.pop-up_show {
+  transform: scale(1);
 }
 
 .pop-up__close-btn {
@@ -126,11 +195,10 @@
 }
 
 .pop-up__send-btn {
-  width: 60px;
+  width: 80px;
   height: 30px;
   margin-left: 20px;
   background-color: transparent;
-  line-height: 1em;
   font-size: 0.8em;
   border-radius: 20px;
   border-color: rgba(0, 0, 0, 0.1);
@@ -231,6 +299,11 @@
 }
 
 @media (max-width: 599px) {
+  .footer {
+    padding: 0 20px;
+    font-size: 0.75em;
+  }
+
   .body__pop-up {
     left: calc(50% - var( --pop-up-s-width) / 2);
     top: calc(50% - var(--pop-up-s-height) / 2);
