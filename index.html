@@ -5,10 +5,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="body">
+  <section class="pop-up body__pop-up">
+    <button class="pop-up__close-btn"></button>
+    <form class="pop-up__form" action="" method="post">
+      <h2 class="pop-up__title">Get in touch</h2>
+      <p class="pop-up__greeting">We are always happy to make valuable new contacts.</p>
+      <div class="pop-up__lbl-input pop-up__lbl-input-name">
+        <label class="pop-up__lbl" for="name">Name</label>
+        <input class="pop-up__input" type="text" id="name" placeholder="John" required>
+        <div class="pop-up__input-underline"></div>
+      </div>
+      <div class="pop-up__lbl-input pop-up__lbl-input-e-mail">
+        <label class="pop-up__lbl" for="e-mail">E-Mail</label>
+        <input class="pop-up__input" type="email" id="e-mail" placeholder="John@example.com" required>
+        <div class="pop-up__input-underline"></div>
+      </div>
+      <div class="pop-up__lbl-input pop-up__lbl-input-message">
+        <label class="pop-up__lbl" for="message">Message</label>
+        <input class="pop-up__input" type="text" id="message" placeholder="Hello there. I'm John. I have question!" required>
+        <div class="pop-up__input-underline"></div>
+      </div>
+      <p class="pop-up__note">I don't see anything <span class="pop-up__note-end">;(</span></p>
+      <button class="pop-up__send-btn">Send</button>
+    </form>
+    <div class="pop-up__info">
+      <h3 class="pop-up__info-title">Contact information</h3>
+      <div class="pop-up__info-link-text">
+        <a class="pop-up__info-link" href="#"></a>
+        <p class="pop-up__info-text">Click to view</p>
+      </div>
+      <ul class="pop-up__info-social">
+        <li><a class="pop-up__info-social-link pop-up__info-social-link-insta" href="https://www.instagram.com/"></a></li>
+        <li><a class="pop-up__info-social-link pop-up__info-social-link-fb" href="https://www.facebook.com/"></a></li>
+        <li><a class="pop-up__info-social-link pop-up__info-social-link-twitter" href="https://twitter.com/"></a></li>
+      </ul>
+    </div>
+  </section>
   <script src="index.js"></script>
 </body>
 </html>
